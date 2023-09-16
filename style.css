@@ -8,7 +8,6 @@ body {
     background-size: cover; /* Ensure the image covers the entire header */
     background-position: center; /* Center the image within the header */
     text-align: center; /* Center-align the text */
-    background-color: #3498db; /* Background color */
     color: #fff; /* Text color */
     padding: 20px; /* Add padding for spacing */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
