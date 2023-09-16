@@ -7,9 +7,15 @@ body {
     background-image: url('Cbadh.jpg');
     background-size: cover; /* Ensure the image covers the entire header */
     background-position: center; /* Center the image within the header */
-    color: #fff;
+    text-align: center; /* Center-align the text */
+    background-color: #3498db; /* Background color */
+    color: #fff; /* Text color */
+    padding: 20px; /* Add padding for spacing */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+    font-size: 36px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     padding: 80px 0;
-
 }
 
 /* Center the text and adjust its size */
