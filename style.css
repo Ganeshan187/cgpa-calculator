@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+/* Apply styles to the entire header */
+.header {
+    background-image: url('71578.jpg');
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: center; /* Center the image within the header */
+    color: #fff;
+    padding: 80px 0;
+
+}
+
+/* Center the text and adjust its size */
+.main-head {
+    text-align: center;
+    font-size: 35px;
+    margin: 0;
+}
+/* Style the calculator */
+.calculator {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Style input fields and buttons */
+input[type="number"], button {
+    margin: 5px;
+    padding: 5px;
+}
+
+/* Style results */
+.results {
+    margin-top: 20px;
+    font-weight: bold;
+}
+.calcu{
+    background-color: rgb(202, 16, 16);
+    color: white;
+    border: 0ch;
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+    font-size:16px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 10px;
+    margin-left: 15px;
+    transition:opacity 0.15s ;
+}
+.calcu:hover{
+    opacity: 0.8;
+}
+/* .calcu:active {
+    opacity: 0.5;
+} */
