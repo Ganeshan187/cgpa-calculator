@@ -4,7 +4,7 @@ body {
   }
 /* Apply styles to the entire header */
 .header {
-    background-image: url('Cbadh.jpg');
+    background-image: url('Cbadh.jpg.png');
     background-size: cover; /* Ensure the image covers the entire header */
     background-position: center; /* Center the image within the header */
     text-align: center; /* Center-align the text */
