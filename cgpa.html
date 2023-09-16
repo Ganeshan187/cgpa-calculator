@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGPA</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <script type="text/JavaScript" src="script.js"></script> -->
+</head>
+<body>
+    
+  <header class="header">
+    <div class="container">
+      <h1 class="main-head">CGPA CALCULATOR</h1>
+    </div>
+  </header>
+  <main class="content">
+    <div class="calculator">
+        <h2>CGPA Calculator</h2>
+        <div class="semester-row">
+            <label for="semester1">Semester 1</label>
+            <input type="number" id="semester1CGPA" step="0.01" placeholder="CGPA">
+            <input type="number" id="semester1Credit" placeholder="Credit">
+        </div>
+        <div class="semester-row">
+            <label for="semester2">Semester 2</label>
+            <input type="number" id="semester2CGPA" step="0.01" placeholder="CGPA">
+            <input type="number" id="semester2Credit" placeholder="Credit">
+        </div>
+        <div class="semester-row">
+            <label for="semester3">Semester 3</label>
+            <input type="number" id="semester3CGPA" step="0.01" placeholder="CGPA">
+            <input type="number" id="semester3Credit" placeholder="Credit">
+        </div>
+        <div class="semester-row">
+            <label for="semester1">Semester 4</label>
+            <input type="number" id="semester4CGPA" step="0.01" placeholder="CGPA">
+            <input type="number" id="semester4Credit" placeholder="Credit">
+        </div>
+        <div class="semester-row">
+            <label for="semester2">Semester 5</label>
+            <input type="number" id="semester5CGPA" step="0.01" placeholder="CGPA">
+            <input type="number" id="semester5Credit" placeholder="Credit">
+        </div>
+        <div class="semester-row">
+            <label for="semester3">Semester 6</label>
+            <input type="number" id="semester6CGPA" step="0.01" placeholder="CGPA">
+            <input type="number" id="semester6Credit" placeholder="Credit">
+        </div>
+        <div class="semester-row">
+            <label for="semester3">Semester 7</label>
+            <input type="number" id="semester7CGPA" step="0.01" placeholder="CGPA">
+            <input type="number" id="semester7Credit" placeholder="Credit">
+        </div>
+        <div class="semester-row">
+            <label for="semester3">Semester 8</label>
+            <input type="number" id="semester8CGPA" step="0.01" placeholder="CGPA">
+            <input type="number" id="semester8Credit" placeholder="Credit">
+        </div>
+        <!-- Button to calculate CGPA and percentage -->
+        <input class="calcu" id="calculateBtn" type="button" value="Calculate" onclick="calculate()">
+        
+        <!-- Display the calculated results -->
+        <div class="results">
+            <p>Total CGPA: <input id="totalCGPA" class="textresult" type="text" name="result"><br></p>
+            <p>Percentage: <input id="percentage" class="textresult" type="text" name="result"></p>
+        </div>
+    </div>
+</main>
+<script>
+function calculate() {
+    let totalPoints = 0;
+    let totalCredits = 0;
+
+    // Calculate total points and total credits for each semester
+    for (let semester = 1; semester <= 8; semester++) {
+        const cgpaInput = document.getElementById(`semester${semester}CGPA`);
+        const creditInput = document.getElementById(`semester${semester}Credit`);
+
+        if (cgpaInput && creditInput) {
+            const cgpaValue = parseFloat(cgpaInput.value) || 0; // Treat blank as zero
+            const creditValue = parseFloat(creditInput.value) || 0; // Treat blank as zero
+            totalPoints += cgpaValue * creditValue;
+            totalCredits += creditValue;
+            
+        }
+    }
+    if (totalCredits === 0) {
+        console.log("No valid CGPA and credit hours provided.");
+        return; // Avoid division by zero
+    }
+
+    // Calculate total CGPA and percentage
+    const totalCGPA = (totalPoints / totalCredits).toFixed(3); // Rounded to 2 decimal places
+    const percentage = (totalCGPA  * 9.5).toFixed(3); // Assuming 1 CGPA is 10%
+
+    // Display results
+    const totalCGPAField = document.getElementById("totalCGPA");
+    const percentageField = document.getElementById("percentage");
+    
+    if (totalCGPAField && percentageField) {
+        totalCGPAField.value = totalCGPA;
+        percentageField.value = percentage + "%";
+    } else {
+        console.log("Result fields not found");
+    }
+}
+
+
+
+
+
+</script>
+  </body>
+</html>
