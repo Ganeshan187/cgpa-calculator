@@ -92,7 +92,7 @@ function calculate() {
 
     // Calculate total CGPA and percentage
     const totalCGPA = (totalPoints / totalCredits).toFixed(3); // Rounded to 2 decimal places
-    const percentage = (totalCGPA  * 9.5).toFixed(3); // Assuming 1 CGPA is 10%
+    const percentage = ((totalCGPA-0.5)*10 ).toFixed(3); // Assuming 1 CGPA is 10%
 
     // Display results
     const totalCGPAField = document.getElementById("totalCGPA");
